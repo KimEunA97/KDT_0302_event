@@ -8,12 +8,44 @@
   <title>Document</title>
 </head>
 
+
+
 <body>
   <script>
 
-    function createTag() {
+    // 외않되? 어케 하는거죠?
 
-    }
+    // function TagSet() {
+    //   obj = {
+    //     a: A,
+    //     b: B,
+    //     c: C,
+    //     d: D,
+    //     e: E,
+    //     f: F,
+    //     g: G,
+    //   }
+    //   return obj;
+    // }
+
+    // function createTagSyn(TagSet, asd, div, main, sec, ul, li, h1) {
+    //   Tagobj = {
+    //     asd: document.createElement(TagSet.a),
+    //     div: document.createElement(TagSet.b),
+    //     main: document.createElement(TagSet.c),
+    //     sec: document.createElement(TagSet.d),
+    //     ul: document.createElement(TagSet.e),
+    //     li: document.createElement(TagSet.f),
+    //     h1: document.createElement(TagSet.g),
+
+    //   }
+    //   return Tagobj;
+    // }
+
+
+    // TagSet("aside","aside","aside","aside","aside","aside");
+
+    // console.log(createTagSyn());
 
     let asideCreate = document.createElement('aside');
     let divCreate = document.createElement('div');
@@ -26,6 +58,11 @@
     let h1Create = document.createElement('h1');
 
     let body = document.body;
+
+    body.style.margin = "0px";
+    body.style.padding = "0px";
+    body.style.boxSizing = "border-box";
+
 
 
     body.appendChild(asideCreate).appendChild(h1Create);
@@ -40,8 +77,6 @@
     main.append(sectionCreate2);
     let sectionSecond = main.children[1];
 
-
-
     // console.dir(main.children);
 
     aside.id = "move-btn";
@@ -49,17 +84,52 @@
     sectionFirst.id = "left-sect"
     sectionSecond.id = "right-sect"
 
+    let root = document.getElementById('root');
+
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.backgroundColor = "cadetblue";
+    root.style.display = "flex";
+
+
     let asd = document.getElementById('left-sect');
     let ul = main.children[0].children[0];
-    let li = ul;
+    let li = ul.appendChild;
     console.dir(ul)
-    
+
+    ul.append(liCreate);
+    ul.append(liCreate);
+    ul.append(liCreate);
+    ul.append(liCreate);
+    ul.append(liCreate);
+
+
+    liCreate.innerText="item-1"
+    liCreate.innerText="item-2"
+    liCreate.innerText="item-3"
+    liCreate.innerText="item-4"
+    liCreate.innerText="item-5"
+
+
+    liCreate.style.width = "200px"
+    liCreate.style.height = "50px"
+
+    liCreate.style.border = "1px solid black"
+
+    // 자식 추가 하기 넘 힘듬 외않되? 여러개 외않되?
+    // append로 여러개 추가 ㄱ 외않되?
+
     for (let i = 0; i < 5; i++) {
 
-      
-      console.log("Asdasd");
+      // ulCreate.append('li')
 
     }
+// 연습부족인거가틍니 연습 더 하겠브니다....... 하..... ㅎㅎ..ㅋㅋ..!
+
+console.dir(root.children[0].children)
+console.dir(sectionSecond);
+
+sectionSecond.append(ulCreate)
 
   </script>
 </body>
