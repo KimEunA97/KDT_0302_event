@@ -11,25 +11,55 @@
 <body>
   <script>
 
+    function createTag() {
+
+    }
+
     let asideCreate = document.createElement('aside');
     let divCreate = document.createElement('div');
     let mainCreate = document.createElement('main');
     let sectionCreate = document.createElement('section');
+    let sectionCreate2 = document.createElement('section');
+
     let ulCreate = document.createElement('ul');
     let liCreate = document.createElement('li');
     let h1Create = document.createElement('h1');
 
-    let body = document.body
-    console.dir(body);
+    let body = document.body;
 
 
     body.appendChild(asideCreate).appendChild(h1Create);
     body.appendChild(divCreate).appendChild(mainCreate).appendChild(sectionCreate).appendChild(ulCreate);
 
+    console.dir(body.children[2]);
+    let aside = body.children[1];
+    let div = body.children[2];
+    let main = div.children[0];
+    let sectionFirst = main.children[0];
+
+    main.append(sectionCreate2);
+    let sectionSecond = main.children[1];
 
 
 
+    // console.dir(main.children);
 
+    aside.id = "move-btn";
+    div.id = "root";
+    sectionFirst.id = "left-sect"
+    sectionSecond.id = "right-sect"
+
+    let asd = document.getElementById('left-sect');
+    let ul = main.children[0].children[0];
+    let li = ul;
+    console.dir(ul)
+    
+    for (let i = 0; i < 5; i++) {
+
+      
+      console.log("Asdasd");
+
+    }
 
   </script>
 </body>
