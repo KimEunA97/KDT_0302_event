@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root">
+    <ul id="menu">
+      <li>items-1</li>
+      <li>items-2</li>
+      <li>items-3</li>
+      <li>items-4</li>
+      <li>items-5</li>
+    </ul>
+  </div>
+
+  <script>
+    const menu = document.getElementById('menu');
+    const firstLi = document.querySelector('#menu>li:nth-child(1)');
+
+
+
+
+    console.log(menu.children);
+    let menuChild = menu.children;
+    let ddockddack = true;
+
+
+    menu.addEventListener('click', function () {
+
+      if (ddockddack === true) {
+        for (let i = 0; i < menuChild.length; i++) {
+          menuChild[i].style.color = "pink";
+          menuChild[i].style.backgroundColor = "cadetblue";
+
+        }
+        ddockddack = false;
+      } else {
+        for (let i = 0; i < menuChild.length; i++) {
+          menuChild[i].style.color = "cadetblue";
+          menuChild[i].style.backgroundColor = "pink";
+
+        }
+        ddockddack = true;
+      }
+
+    });
+
+
+
+
+
+
+
+
+
+    //객체 안의 함수 = 메서드
+    //매개변수 자리의 함수 = 콜백함수(기능 만들어 놨으니 니가 짜)
+    // DOM API 이벤트리스너 메서드 = 이벤트를 만드는 방법, 내장함수
+
+    // menu.children[1].addEventListener('click', function () {
+    //   menu.children[1].style.color = "cadetblue";
+    // })
+    // menu.children[2].addEventListener('click', function () {
+    //   menu.children[2].style.color = "cadetblue";
+    // })
+    // menu.children[3].addEventListener('click', function () {
+    //   menu.children[3].style.color = "red";
+    // })
+    // menu.children[4].addEventListener('click', function () {
+    //   menu.children[4].style.color = "blue";
+    // })
+
+  </script>
+</body>
+
+</html>
